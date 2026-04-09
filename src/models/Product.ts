@@ -14,7 +14,12 @@ class Product{
         this.description = description;
         this.price = price;
         this.rating = rating;
-
         
+        DisplayDetails(): string {
+            return `Title: ${this.title}\nDescription: ${this.description}\nPrice: $${this.price.toFixed(2)}\nRating: ${this.rating}/5`;
+        }
+
+
+
     }
 }
