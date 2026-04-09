@@ -1,10 +1,4 @@
 import { calculateDiscount } from "../utils/discountCalculator";
-
-fetch('https://dummyjson.com/products')
-.then(res => res.json())
-.then(console.log);
-
-
 export class Product{
     title: string;
     description: string;
