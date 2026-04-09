@@ -14,12 +14,15 @@ class Product{
         this.description = description;
         this.price = price;
         this.rating = rating;
-        
-        DisplayDetails(): string {
-            return `Title: ${this.title}\nDescription: ${this.description}\nPrice: $${this.price.toFixed(2)}\nRating: ${this.rating}/5`;
-        }
+    }
 
-
-
+    displayDetails(): string {
+        return `Title: ${this.title}\nDescription: ${this.description}\nPrice: $${this.price.toFixed(2)}\nRating: ${this.rating}/5`;
+    }
+    
+    getPriceWithDiscount(discountPercent: number): number {
+        const discountAmount = this.price * (discountPercent / 100);
+        const finalPrice = this.price - discountAmount;
+        return finalPrice;
     }
 }
